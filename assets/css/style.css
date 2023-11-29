@@ -539,6 +539,15 @@ body {
   border-radius: var(--radius-5);
 }
 
+/* new course */
+#newCourse {
+  margin-top: 2.5rem;
+}
+#newCourse h2 {
+  font-size: 27px;
+  color: #272727;
+  margin-bottom: 1.7rem;
+}
 
 
 

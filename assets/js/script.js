@@ -61,3 +61,42 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+$(document).ready(function() {
+//  $("#newCourse .owl-carousel").owlCarousel({
+  // loop:true,
+  // margin:10,
+  // nav:true,
+  // responsive:{
+  //     0:{
+  //         items:1
+  //     },
+  //     600:{
+  //         items:3
+  //     },
+  //     1000:{
+  //         items:5
+  //     }
+  // }
+// });
+
+  $("#newCourse .owl-carousel").owlCarousel({
+    // rtl: true,
+    loop:true,
+    margin:10,
+    // nav: true,
+    responsive:{
+        0:{
+            items:1.4
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4.4
+        }
+    }
+  });
+
+
+});
