@@ -894,9 +894,93 @@ body {
 }
 
 
+/*-----------------------------------*\
+  #About us page
+\*-----------------------------------*/
+#about {
+  margin-top: 10rem;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
 
 
+#about .about-grid {
+  display: grid;
 
+}
+#about .about-grid h3 {
+  font-size: 27px;
+  margin-bottom: 1.5rem;
+}
+#about .about-grid div {
+  padding: 2rem;
+}
+#about .about-grid p {
+  margin-bottom: 2rem;
+}
+
+#team {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+#team h2 {
+  font-size: 27px;
+}
+
+#team .team-members {
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#team .team-members .team-card {
+  /* border: 1px solid red; */
+  width: 67%;
+  /* margin: 0 auto; */
+  background-color: var(--platinum);
+  border-radius: 7px;
+  
+}
+#team .team-members .team-card:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.team-members .team-card .team-profile {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.1rem 0 1rem 0;
+  
+}
+.team-members .team-card .team-profile img {
+  width: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--radical-red);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: .5s ease;
+}
+.team-members .team-card .team-profile img:hover {
+  border-radius: 5px;
+  width: 68%;
+  border: 1px solid var(--radical-red);
+}
+.team-members .team-card .team-details {
+  color: var(--black_80);
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.team-members .team-card .team-details .team-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1174,23 +1258,22 @@ body {
    * ABOUT
    */
 
-  .about { padding-block-start: 50px; }
-
-  .about-banner {
-    padding: 60px;
-    padding-inline-end: 0;
+   #about .about-grid {
+    grid-template-columns: 1fr 1fr;
+  
+  }
+  #team .team-members {
+    /* border: 1px solid; */
+    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  #team .team-members .team-card {
+    width: 310px;
   }
 
-  .about-banner .img-holder {
-    max-width: max-content;
-    margin-inline: auto;
-  }
-
-  .about-shape-1 {
-    display: block;
-    top: -40px;
-    right: -70px;
-  }
 
 
 
@@ -1269,7 +1352,8 @@ body {
     align-items: center;
     gap: 60px;
   }
-
+   
+ 
 
 
   /**
