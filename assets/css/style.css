@@ -940,7 +940,7 @@ body {
 }
 #team .team-members .team-card {
   /* border: 1px solid red; */
-  width: 67%;
+  width: 85%;
   /* margin: 0 auto; */
   background-color: var(--platinum);
   border-radius: 7px;
