@@ -615,8 +615,79 @@ body {
 }
 
 
+/*-----------------------------------*\
+  #Contact us Page
+\*-----------------------------------*/
+#contact {
+  margin-top: 14rem;
+}
 
+#contact h2 {
+  font-size: 27px;
+  text-align: center;
+}
+#contact .contact-text {
+  text-align: center;
+}
 
+#contact .contact {
+  margin-top: 3rem;
+  background-color: var(--light-gray);
+  width: 100%;
+  padding: 2.4rem 0;
+  display: grid;
+}
+#contact .contact form .input-field {
+  margin: 0.9rem 0;
+}
+#contact .contact form .input-field label {
+  font-size: 17px;
+  margin-bottom: 0.6rem;
+
+}
+#contact .contact form .input-field input, textarea {
+  width: 100%;
+  background-color: #fefdfd;
+  padding: 0.8rem 1.4rem;
+  outline: none;
+  border-radius: 5px;
+}
+#contact .contact .contact-address {
+  /* border: 1px solid; */
+  margin-top: 2.5rem;
+}
+#contact .contact .contact-address h3 {
+  font-size: 21px;
+
+}
+
+#contact .contact .contact-address .office-address {
+  padding: 1.8rem;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  gap: 20px;  
+
+}
+#contact .contact .contact-address .office-address div {
+  background-color: #fefdfd;
+  padding: 1.7rem 0.8rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contact .contact-address .office-address div i {
+  font-size: 25px;
+  color: var(--kappel);
+}
+
+#contact .contact .contact-address .office-address div .addr-name {
+  margin-top: 1.3rem;
+  font-size: 22px;
+  font-weight: 600;
+}
 
 /*-----------------------------------*\
   #COURSE
@@ -1272,6 +1343,26 @@ body {
   }
   #team .team-members .team-card {
     width: 310px;
+  }
+
+
+  /* 
+   - Contact US
+  */
+  #contact .contact {
+    padding: 0rem 4.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  #contact .contact form .input-field label {
+    font-size: 19px;
+    margin-bottom: 0.6rem;
+  
+  }
+  #contact .contact form .input-field input, textarea {
+    
+    padding: 0.9rem 1.4rem;
+    
   }
 
 
