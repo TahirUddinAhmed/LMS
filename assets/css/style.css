@@ -643,6 +643,7 @@ body {
 #contact .contact form .input-field label {
   font-size: 17px;
   margin-bottom: 0.6rem;
+  color: var(--black_80);
 
 }
 #contact .contact form .input-field input, textarea {
@@ -658,7 +659,7 @@ body {
 }
 #contact .contact .contact-address h3 {
   font-size: 21px;
-
+  
 }
 
 #contact .contact .contact-address .office-address {
@@ -687,6 +688,7 @@ body {
   margin-top: 1.3rem;
   font-size: 22px;
   font-weight: 600;
+  color: var(--black_80);
 }
 
 /*-----------------------------------*\
@@ -1357,6 +1359,7 @@ body {
   #contact .contact form .input-field label {
     font-size: 19px;
     margin-bottom: 0.6rem;
+    color: var(--black_80);
   
   }
   #contact .contact form .input-field input, textarea {
