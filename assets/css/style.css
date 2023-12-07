@@ -1062,7 +1062,7 @@ body {
 \*-----------------------------------*/
 .courses {
   margin-top: 8rem;
-  background-image: url("/assets/images/courses.jpg");
+  background-image: url("../images/courses.jpg");
   height: 256px;
   width: 100%;
   object-fit: cover;
