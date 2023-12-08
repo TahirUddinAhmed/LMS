@@ -155,16 +155,13 @@
 
         <div class="course-preview">
           <img src="./assets/images/thumb-3.png" alt="Video Thumbnail">
-          <button class="play-button" onclick="playVideo()">
+          <button class="play-button" id="video-preview">
               <ion-icon name="play" aria-hidden="true"></ion-icon>
           </button>
           <p>
             Preview of the course
           </p>
 
-            <!-- <video width="" height="360" controls>
-                <source src="./assets/course-video/course-preview.mp4" type="video/mp4">
-            </video> -->
         </div>
     </div>
    </section>
@@ -385,6 +382,34 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+
+  <script>
+    // function playVideo() {
+              // var video = document.createElement("video");
+              // video.src = "./assets/course-video/course-preview.mp4";
+              // video.controls = true;
+              // video.autoplay = true;
+              // video.style.width = "100%";
+              // video.style.height = "auto";
+              // video.style.marginTop = "20px"; /* Adjust spacing as needed */
+              // document.querySelector(".video-preview").replaceWith(video);
+    // }
+
+    const play_button = document.querySelector("#video-preview");
+
+    play_button.addEventListener("click", function() {
+      let video = document.createElement("video");
+      video.src = "./assets/course-video/course-preview.mp4";
+      video.controls = true;
+      video.autoplay = true;
+      video.style.width = "100%";
+      video.style.height = "auto";
+      video.style.marginTop = "20px"; /* Adjust spacing as needed */
+      document.querySelector(".course-preview").replaceWith(video);
+
+      console.log(video)
+    });
+  </script>
 </body>
 
 </html>
