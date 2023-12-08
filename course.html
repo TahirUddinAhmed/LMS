@@ -154,13 +154,16 @@
         </div>
 
         <div class="course-preview">
-          <img src="./assets/images/thumb-3.png" alt="Video Thumbnail">
-          <button class="play-button" id="video-preview">
-              <ion-icon name="play" aria-hidden="true"></ion-icon>
-          </button>
-          <p>
-            Preview of the course
-          </p>
+          <div class="video-preview">
+            <img src="./assets/images/thumb-3.png" alt="Video Thumbnail">
+            <button class="play-button" id="video-preview">
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+            <p>
+              Preview of the course
+            </p>
+
+          </div>
 
         </div>
     </div>
@@ -405,7 +408,7 @@
       video.style.width = "100%";
       video.style.height = "auto";
       video.style.marginTop = "20px"; /* Adjust spacing as needed */
-      document.querySelector(".course-preview").replaceWith(video);
+      document.querySelector(".video-preview").replaceWith(video);
 
       console.log(video)
     });
