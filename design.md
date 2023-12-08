@@ -14,9 +14,11 @@
  ## Individual Course Page 
  Individual Course Page consists 
    - Course Video Preview 
+   - Course Curriculam
+   - Price of the course
+   - Buy now, Add to cart, Wishlist
    - Course Description 
    - Instructor profile / details
-   - Course Curriculam
    - related course 
 
  ## Add to cart 
