@@ -142,7 +142,7 @@
 
   <main>
    <section id="single-course">
-    <div class="course-header">
+    <div class="course-header container">
         <div class="course-details">
             <h2>Web Development Full Course</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus reprehenderit, eum corporis cupiditate odit iure.</p>
@@ -154,9 +154,17 @@
         </div>
 
         <div class="course-preview">
-            <video width="" height="360" controls>
+          <img src="./assets/images/thumb-3.png" alt="Video Thumbnail">
+          <button class="play-button" onclick="playVideo()">
+              <ion-icon name="play" aria-hidden="true"></ion-icon>
+          </button>
+          <p>
+            Preview of the course
+          </p>
+
+            <!-- <video width="" height="360" controls>
                 <source src="./assets/course-video/course-preview.mp4" type="video/mp4">
-            </video>
+            </video> -->
         </div>
     </div>
    </section>

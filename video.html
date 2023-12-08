@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Course Page</title>
+    <style>
+        /* Add some basic styling for the video preview */
+        .video-preview {
+            position: relative;
+            width: 100%;
+            max-width: 640px; /* Adjust the maximum width as needed */
+            margin: 0 auto;
+        }
+
+        .video-preview img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .play-button img {
+            width: 50%;
+            height: auto;
+            filter: brightness(200%); /* Adjust brightness as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Course Title</h1>
+
+    <p>Your course description goes here.</p>
+
+    <!-- Video Preview Section -->
+    <div class="video-preview">
+        <img src="./assets/images/course-2.jpg" alt="Video Thumbnail">
+        <button class="play-button" onclick="playVideo()">
+            <ion-icon name="play" aria-hidden="true"></ion-icon>
+        </button>
+    </div>
+
+    <script>
+        function playVideo() {
+            var video = document.createElement("video");
+            video.src = "./assets/course-video/course-preview.mp4";
+            video.controls = true;
+            video.autoplay = true;
+            video.style.width = "100%";
+            video.style.height = "auto";
+            video.style.marginTop = "20px"; /* Adjust spacing as needed */
+            document.querySelector(".video-preview").replaceWith(video);
+        }
+    </script>
+
+    <p>Additional course content goes here.</p>
+
+</body>
+</html>
