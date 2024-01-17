@@ -96,19 +96,19 @@
           </li>
 
           <li class="navbar-item">
-            <a href="about.html" class="navbar-link" data-nav-link>About</a>
+            <a href="about.php" class="navbar-link" data-nav-link>About</a>
           </li>
 
           <li class="navbar-item">
-            <a href="courses.html" class="navbar-link" data-nav-link>Courses</a>
+            <a href="courses.php" class="navbar-link" data-nav-link>Courses</a>
           </li>
 
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-          </li>
+          </li> -->
 
           <li class="navbar-item">
-            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+            <a href="contact.php" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
         </ul>
