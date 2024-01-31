@@ -21,8 +21,40 @@
 
  }
 
+//  Edit category 
+if(isset($_POST['editCat'])) {
+    $catID = $_POST['cat-id'];
+    $catName = $_POST['categoryName'];
+
+    // update query 
+    $update = "UPDATE `course_categories` SET `name` = '$catName' WHERE `category_id` = $catID;";
+    $updateResult = mysqli_query($conn, $update);
+
+    if(!$updateResult) {
+        die("Update QUERY FAILED" . mysqli_error($conn)); 
+    } else {
+        header("Location: categories.php");
+    }
+}
+
+//  Delete category
+if(isset($_GET['delete'])) {
+    $catID = $_GET['delete'];
+
+    // query to delete category
+    $delete = "DELETE FROM course_categories WHERE category_id = $catID";
+    $result = mysqli_query($conn, $delete);
+
+    if(!$result) {
+        die("QUERY FAILED" . mysqli_error($conn));
+    } else {
+        // refresh the page
+        header("Location: categories.php");
+    }
+}
+
 //  query to retrieve all categories item
-$query = "SELECT * FROM course_categories";
+$query = "SELECT * FROM course_categories ORDER BY `category_id` DESC";
 $result = mysqli_query($conn, $query);
 
 if(!$result) {
@@ -51,6 +83,36 @@ if(!$result) {
 
 
     </div>
+    <?php
+        }
+
+        if(isset($_GET['edit'])) {
+            $theID = $_GET['edit'];
+
+            $query = "SELECT * FROM course_categories WHERE category_id = $theID";
+            $get_result = mysqli_query($conn, $query);
+
+            if(!$get_result) {
+                die("QUERY FAILED" . mysqli_error($conn));
+            }
+
+            while($row=mysqli_fetch_assoc($get_result)) {
+                $name = $row['name'];
+            }
+
+    ?>
+            <div class="border p-2 mt-2" style="width: 26rem;">
+                <form action="" method="POST">
+                        <input type="hidden" name="cat-id" value="<?= $theID ?>">
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="CategoryName">Name</label>
+                            <input type="text" name="categoryName" value="<?= $name ?>" id="categoryName" class="form-control" placeholder="Type category..." />
+                            <span class="text-danger"><?= $catErr ?? null ?></span>
+                        </div>
+                        
+                        <button type="submit" name="editCat" class="btn btn-primary btn-block">Save Changes</button>
+                </form>
+            </div>
     <?php
         }
     ?>
@@ -89,9 +151,9 @@ if(!$result) {
                         <td>0</td>
                         <td>
                             <!-- edit -->
-                            <a href="" class="btn btn-sm btn-success">Edit</a>
+                            <a href="?edit=<?= $cat_id ?>" class="btn btn-sm btn-success"><i class="fa-solid fa-pen"></i> Edit</a>
                             <!-- delete -->
-                            <a href="" class="btn btn-sm btn-danger">Delete</a>
+                            <a href="?delete=<?= $cat_id ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delele this category?')"><i class="fa-solid fa-xmark"></i> Delete</a>
                         </td>
                     </tr>
                 <?php
