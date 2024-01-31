@@ -511,25 +511,8 @@
                   </form>
                 </div>
 
-                <div class="course-categories">
-                  <h3>Course Category</h3>
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JAVASCRIPT</li>
-                    <li>PHP</li>
-                    <li>C++</li>
-                    <li>JAVA</li>
-                    <li>Node.js</li>
-                    <li>Python</li>
-                    <li>C Programming</li>
-                    <li>Web Development</li>
-                    <li>DSA</li>
-                    <li>SQL</li>
-                    <li>Cloud</li>
-                    
-                  </ul>
-                </div>
+                <!-- Course category -->
+                <?php include("includes/_course-category.php"); ?>
             </div>
         </div>
     </section>
