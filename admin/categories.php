@@ -144,11 +144,17 @@ if(!$result) {
                         while($data=mysqli_fetch_assoc($result)) {
                             $cat_id = $data['category_id'];
                             $name = $data['name'];
+
+                            // no of course
+                            $courseQ = "SELECT * FROM courses WHERE category_id = $cat_id";
+                            $getCourse_res = mysqli_query($conn, $courseQ);
+                            $getNumCource = mysqli_num_rows($getCourse_res);
+                            
                 ?>
                     <tr>
                         <td><?= $sno ?></td>
                         <td><strong><?= $name ?></strong></td>
-                        <td>0</td>
+                        <td><?= $getNumCource ?></td>
                         <td>
                             <!-- edit -->
                             <a href="?edit=<?= $cat_id ?>" class="btn btn-sm btn-success"><i class="fa-solid fa-pen"></i> Edit</a>
