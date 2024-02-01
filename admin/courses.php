@@ -12,6 +12,9 @@
             case 'add': 
                 include("includes/_addCourse.php");
                 break;
+            case 'lesson':
+                include("includes/_addLesson.php");
+                break;
             default: 
                 include("includes/_manageCourse.php");
         }

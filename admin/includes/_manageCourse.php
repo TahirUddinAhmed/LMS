@@ -36,8 +36,22 @@ if(isset($_GET['delete'])) {
  }
 ?>
 
+<?php
+ if(isset($_GET['lessonAdded'])) {
+?>
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+<i class="fa-solid fa-circle-check ms-2"></i> Lesson added successfully
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<?php
+ }
+?>
+
 
 <div class="container-fluid">
+    <div class="text-end mb-2">
+        <a href="?source=lesson" class="btn btn-sm btn-success"><i class="fa-solid fa-plus me-2"></i> Add Lessons</a>
+    </div>
 <div class="card mb-4">
         <div class="card-body">
             <table id="datatablesSimple">
