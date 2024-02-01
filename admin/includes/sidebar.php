@@ -20,10 +20,10 @@
                 </a>
                 <div class="collapse" id="courses" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="courses.php?source=add">
                         <i class="fa-solid fa-share me-2"></i> Add Course
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="courses.php">
                         <i class="fa-solid fa-share me-2"></i> Manage course
                         </a>
                     </nav>
@@ -46,13 +46,13 @@
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                         <a class="nav-link" href="#">
-                            Instructors
+                        <i class="fa-solid fa-share me-2"></i> Instructors
                         </a>
                         <a class="nav-link" href="#">
-                            Students
+                        <i class="fa-solid fa-share me-2"></i> Students
                         </a>
                         <a class="nav-link" href="#">
-                            Admin
+                        <i class="fa-solid fa-share me-2"></i>  Admin
                         </a>
                     </nav>
                 </div>
