@@ -8,10 +8,10 @@ if(!$getCourse) {
    die('QUERY FAILED' . mysqli_error($conn)); 
 }
 
-// if(mysqli_num_rows($getCourse) <= 0) {
-//     header("Location: courses.php?source=add");
-//     exit();
-// }
+if(mysqli_num_rows($getCourse) <= 0) {
+    header("Location: courses.php?source=add");
+    exit();
+}
 
  if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $lesson_title = mysqli_real_escape_string($conn, $_POST['lessonTitle']);
