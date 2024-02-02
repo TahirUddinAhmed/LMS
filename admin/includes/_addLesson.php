@@ -28,7 +28,7 @@ if(!$getCourse) {
     // allowed extension
     $allowed_ext = array('mp4', 'webm', 'avi', 'mov');
 
-    if(empty($lesson_title) || empty($courseID) || empty($status)) {
+    if(empty($lesson_title) || empty($CourseId) || empty($status)) {
         $formErr = "All fields are required!";
     } else {
         if($error == 0) {
@@ -37,11 +37,11 @@ if(!$getCourse) {
                 $targetDirectory = "../assets/course-video/$newVideName";
     
                 move_uploaded_file($temp_name, $targetDirectory);
-
+    
                 // query to insert data into database 
-                $query = "INSERT INTO `lessons` (`course_id`, `title`, `content`, `status`, `created_at`) VALUES ('$courseID', '$lesson_title', '$newVideName', '$status', current_timestamp());";
+                $query = "INSERT INTO `lessons` (`course_id`, `title`, `content`, `status`, `created_at`) VALUES ('$CourseId', '$lesson_title', '$newVideName', '$status', current_timestamp());";
                 $result = mysqli_query($conn, $query);
-
+    
                 if(!$result) {
                     die("QUERY FAILED" . mysqli_error($conn));
                 } else {
@@ -58,7 +58,8 @@ if(!$getCourse) {
     }
 
     
-
+    
+    
     
  }
 
