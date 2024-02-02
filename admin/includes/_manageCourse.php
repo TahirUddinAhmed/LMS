@@ -115,6 +115,7 @@ if(isset($_GET['delete'])) {
                                 </td>
                                 <td>
                                     <?= $countLesson ?? null ?>
+                                    <p><a href="courses.php?source=manageLesson&cid=<?= $courseID ?>">View lessons</a></p>
                                 </td>
                                 <td class="mb-2">
                                  <?php
