@@ -97,6 +97,11 @@ if(isset($_GET['delete'])) {
                             while($row=mysqli_fetch_assoc($get_CatName)) {
                                 $cat_name = $row['name'];
                             }
+
+                            // count lesson number 
+                            $countLesson = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM lessons WHERE course_id = $courseID")); 
+                            
+                            
                     ?>
 
                             <tr>
@@ -109,7 +114,7 @@ if(isset($_GET['delete'])) {
                                     <p><?= $cat_name ?></p>
                                 </td>
                                 <td>
-                                    0
+                                    <?= $countLesson ?? null ?>
                                 </td>
                                 <td class="mb-2">
                                  <?php
