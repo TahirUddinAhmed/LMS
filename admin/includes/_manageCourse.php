@@ -46,6 +46,16 @@ if(isset($_GET['delete'])) {
 <?php
  }
 ?>
+<?php
+ if(isset($_GET['emptyLesson'])) {
+?>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<i class="fa-solid fa-circle-exclamation me-2"></i> there are currently no lessons available in this course. Please consider adding a lesson to access content.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<?php
+ }
+?>
 
 
 <div class="container-fluid">
